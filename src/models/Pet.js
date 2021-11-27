@@ -12,6 +12,16 @@ const petSchema = new Schema({
     
 })
 
-const Pet = model(petSchema);
+petSchema.set('toJSON', {
+    transform: (document, returnedObject) =>{
+        returnedObject.id = returnedObject._id;
+        delete returnedObject._id;
+        delete returnedObject.owner;
+        delete returnedObject.__v;
+    
+    }
+})
+
+const Pet = model('Pet',petSchema);
 
 export default Pet

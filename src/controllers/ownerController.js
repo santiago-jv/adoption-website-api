@@ -37,8 +37,8 @@ OwnerController.registerOwner = async (request, response,next) => {
 
         return response.status(201).json({user:owner, token})
     } catch (error) {
-        console.log(error)
-        error.type = 'createOwner'
+        error.message = 'There was an error creating the user';
+        error.type = 'CreateObjectError';
         next(error)
     }
     

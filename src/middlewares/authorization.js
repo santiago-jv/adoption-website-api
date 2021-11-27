@@ -6,7 +6,7 @@ const AuthorizationMiddleware = (request,response,next) => {
     console.log(process.env.SECRET_KEY)
     let token = request.headers.authorization
 
-    if(!(token && token.startswith('Bearer '))){
+    if(!(token && token.startsWith('Bearer '))){
         return response.status(400).json({
             message: "The token should be of type 'Bearer'."
         })
