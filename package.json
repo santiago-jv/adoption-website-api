@@ -6,7 +6,8 @@
   "scripts": {
     "babel-node": "babel-node src/index.js",
     "dev": "nodemon --exec npm run babel-node",
-    "start": "npm run babel-node"
+    "start": "node build/index.js",
+    "build":"babel-node src -d build"
   },
   "babel": {
     "presets": [
