@@ -1,9 +1,10 @@
 import { model, Schema } from "mongoose";
+import defaultProperties from "../helpers/defaultProperties";
 
 const petSchema = new Schema({
-    name:{type:String, required:true } ,
-    age: {type:Number, required:true},
-    gender:{type:String, required:true},
+    name:defaultProperties() ,
+    age: defaultProperties(Number),
+    gender:defaultProperties(),
     owner:{
         ref:"Owner",
         type:Schema.Types.ObjectId

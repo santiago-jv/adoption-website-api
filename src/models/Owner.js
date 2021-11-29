@@ -1,11 +1,12 @@
 import { model, Schema } from "mongoose";
+import defaultProperties from "../helpers/defaultProperties";
 
 // remember the favorites
 const ownerSchema = new Schema({
-    name:{type:String, required:true},
-    email:{type:String, required:true, unique:true},
-    password:{type:String, required:true},
-    phoneNumber:{type:Number, required:true},
+    name:defaultProperties(),
+    email:defaultProperties(undefined,true),
+    password:defaultProperties(),
+    phoneNumber:defaultProperties(Number),
     pets: [{
         ref:"Pet",
         type:Schema.Types.ObjectId,

@@ -1,9 +1,9 @@
-import { verify } from 'jsonwebtoken';
-import dotenv from 'dotenv';
-dotenv.config()
+ import { verify } from 'jsonwebtoken';
+import {config} from 'dotenv';
+
+config()
 
 const AuthorizationMiddleware = (request,response,next) => {
-    console.log(process.env.SECRET_KEY)
     let token = request.headers.authorization
 
     if(!(token && token.startsWith('Bearer '))){
@@ -26,3 +26,4 @@ const AuthorizationMiddleware = (request,response,next) => {
 
 }
 export default AuthorizationMiddleware
+

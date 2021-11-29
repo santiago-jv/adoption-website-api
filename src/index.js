@@ -11,14 +11,14 @@ import errorHandlerMiddleware from './middlewares/errorHandler';
 dotenv.config();
 app.use(cors())
 app.use(morgan('dev'))
-app.use(json())
+app.use(json({limit:1024}))
 app.set('port', process.env.PORT || 8080)
 
 //routers
 app.use('/api',indexRouter)
 app.use(errorHandlerMiddleware)
 
-app.listen(app.get('port'), ()=>{
+app.listen(app.get('port'), () => {
     console.log(`Server running in http://localhost:${app.get('port')}`)
 })
 

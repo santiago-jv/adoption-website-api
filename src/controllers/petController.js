@@ -3,11 +3,10 @@ import Pet from "../models/Pet";
 const PetController = {};
 
 PetController.createPet = async (request, response,next) => {
+    console.log(request.body, request.headers)
     const {name,gender,age,personality} = request.body;
-    console.log(request.headers.user)
     const {id} = request.headers.user
-
-    //validateData
+    
     try {
         const pet = await Pet.create({name,gender,age,personality,owner:id})
         return response.status(201).json(pet);
