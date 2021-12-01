@@ -3,15 +3,13 @@ import Pet from "../models/Pet";
 const PetController = {};
 
 PetController.createPet = async (request, response,next) => {
-    console.log(request.body, request.headers)
-    const {name,gender,age,personality} = request.body;
+    const {name,photo,gender,age,personality} = request.body;
     const {id} = request.headers.user
     
     try {
-        const pet = await Pet.create({name,gender,age,personality,owner:id})
+        const pet = await Pet.create({name, photo, gender, age, personality, owner:id})
         return response.status(201).json(pet);
     } catch (error) {
-        console.log(error);
         error.message = 'There was an error creating the pet';
         error.type = 'CreateObjectError';
         next(error);

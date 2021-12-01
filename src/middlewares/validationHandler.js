@@ -1,7 +1,7 @@
 import { validationResult } from "express-validator";
 
 
-const validationHandler = (request,response,next) => {
+const validationHandlerMiddleware = (request,response,next) => {
     const errors = validationResult(request);
 
     if (!errors.isEmpty()) {
@@ -11,5 +11,5 @@ const validationHandler = (request,response,next) => {
     next()
 
 }
-export default validationHandler
+export default validationHandlerMiddleware
 

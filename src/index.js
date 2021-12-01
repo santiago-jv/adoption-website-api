@@ -10,7 +10,7 @@ import errorHandlerMiddleware from './middlewares/errorHandler';
 dotenv.config();
 app.use(cors())
 
-app.use(json({limit:1024}))
+app.use(json({limit:'30mb'}))
 app.set('port', process.env.PORT || 8080)
 
 //routers

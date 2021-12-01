@@ -3,6 +3,7 @@ import defaultProperties from "../helpers/defaultProperties";
 
 const petSchema = new Schema({
     name:defaultProperties() ,
+    photo:defaultProperties() ,
     age: defaultProperties(Number),
     gender:defaultProperties(),
     owner:{

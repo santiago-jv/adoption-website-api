@@ -1,6 +1,6 @@
 import { connect, disconnect } from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config()
+import {config} from 'dotenv';
+config()
 
 connect(process.env.MONGODB_URL).then(()=>{
     console.log("Database connected")
