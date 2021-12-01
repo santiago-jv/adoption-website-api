@@ -7,6 +7,7 @@ const ownerSchema = new Schema({
     email:defaultProperties(undefined,true),
     password:defaultProperties(),
     phoneNumber:defaultProperties(Number),
+    address:defaultProperties(),
     pets: [{
         ref:"Pet",
         type:Schema.Types.ObjectId,
