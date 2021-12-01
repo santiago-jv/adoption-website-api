@@ -1,6 +1,6 @@
 # REST API of Adoption Website
-
-#### Server: https://adoption-website-api.herokuapp.com
+  This api will be consumed by the following project: https://github.com/LoreA-dev/Adoption-WebSite
+  #### Server: https://adoption-website-api.herokuapp.com
 
 ## Endpoints
 
