@@ -10,6 +10,10 @@ export default [
         .notEmpty().withMessage("The field cannot be empty")
         .isString().withMessage("The field must be of type string"),
 
+    check('breed')
+        .notEmpty().withMessage("The field cannot be empty")
+        .isString().withMessage("The field must be of type string"),
+
     check('age')
         .notEmpty().withMessage("The field cannot be empty")
         .isNumeric().withMessage("The field must be of type number"),

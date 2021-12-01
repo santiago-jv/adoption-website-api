@@ -6,6 +6,7 @@ const petSchema = new Schema({
     photo:defaultProperties() ,
     age: defaultProperties(Number),
     gender:defaultProperties(),
+    breed:defaultProperties(),
     owner:{
         ref:"Owner",
         type:Schema.Types.ObjectId
