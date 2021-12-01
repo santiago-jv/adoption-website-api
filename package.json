@@ -4,15 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel-node": "babel-node src/index.js",
-    "dev": "nodemon --exec npm run babel-node",
-    "start": "node build/index.js",
-    "build":"babel-node src -d build"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec npm run start"
   },
   "keywords": [],
   "author": "",
@@ -24,17 +17,18 @@
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
     "jsonwebtoken": "^8.5.1",
-    "babel-cli": "^6.26.0",
     "mongoose": "^6.0.13"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   },
   "engines": {
     "node": "16.8.0",
-    "npm":"7.21.0"
+    "npm": "7.21.0"
   }
 }
