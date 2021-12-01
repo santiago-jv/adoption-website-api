@@ -10,6 +10,10 @@ export default [
         .notEmpty().withMessage("The field cannot be empty")
         .isMobilePhone('es-CO').withMessage("The field must be a phone number from Colombia"),
 
+    check('address')
+        .notEmpty().withMessage("The field cannot be empty")
+        .isString().withMessage("The field must be of type string"),
+        
     check('email')
         .notEmpty().withMessage("The field cannot be empty")
         .isString().withMessage("The field must be of type string")
