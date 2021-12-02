@@ -5,6 +5,10 @@ export default [
         .notEmpty().withMessage("The field cannot be empty")
         .isString().withMessage("The field must be of type string")
         .isLength({min:2}).withMessage("The field must have a minimum of 2 characters"),
+        
+    check('photo')
+        .notEmpty().withMessage("The field cannot be empty")
+        .isString().withMessage("The field must be of type string"),
 
     check('phoneNumber')
         .notEmpty().withMessage("The field cannot be empty")

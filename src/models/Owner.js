@@ -5,6 +5,7 @@ import defaultProperties from "../helpers/defaultProperties";
 const ownerSchema = new Schema({
     name:defaultProperties(),
     email:defaultProperties(undefined,true),
+    photo:defaultProperties(),
     password:defaultProperties(),
     phoneNumber:defaultProperties(Number),
     address:defaultProperties(),

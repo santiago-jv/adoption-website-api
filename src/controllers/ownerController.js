@@ -23,11 +23,11 @@ OwnerController.loginOwner = async(request, response) => {
 
 }
 OwnerController.registerOwner = async (request, response,next) => {
-    let {name, email, address, password, phoneNumber} = request.body;
+    let {name, email, photo, address, password, phoneNumber} = request.body;
 
     try {
         password = await hash(password,10)
-        const owner = await Owner.create({name, email, address, password, phoneNumber})
+        const owner = await Owner.create({name, email, photo,  address, password, phoneNumber})
 
         const token = jwt.sign({id: owner._id},process.env.SECRET_KEY);
         return response.status(201).json({user:owner, token})
