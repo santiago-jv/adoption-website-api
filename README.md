@@ -47,6 +47,7 @@
     "name":Required,
     "photo":(base 64 image) Required,
     "age":Required,
+    "breed"Required,
     "gender":Required,
     "personality":Required
   }
