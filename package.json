@@ -19,7 +19,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.13"
+    "mongoose": "^6.0.13",
+    "twilio": "^3.71.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
