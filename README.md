@@ -35,6 +35,8 @@
   {
     "name":Required,
     "photo":(base 64 image) Required,
+    "departament":Required,
+    "town":Required,
     "phoneNumber":Required,
     "address":Required,
     "email":Required,

@@ -6,6 +6,14 @@ export default [
         .isString().withMessage("The field must be of type string")
         .isLength({min:2}).withMessage("The field must have a minimum of 2 characters"),
         
+    check('departament')
+        .notEmpty().withMessage("The field cannot be empty")
+        .isString().withMessage("The field must be of type string"),  
+
+    check('town')
+        .notEmpty().withMessage("The field cannot be empty")
+        .isString().withMessage("The field must be of type string"),
+
     check('photo')
         .notEmpty().withMessage("The field cannot be empty")
         .isString().withMessage("The field must be of type string"),
