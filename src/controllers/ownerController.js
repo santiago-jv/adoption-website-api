@@ -1,7 +1,6 @@
 import Owner from "../models/Owner";
 import { hash, compare } from "bcrypt";
 import jwt from 'jsonwebtoken';
-import sendMessage from "../helpers/sendMessage";
 
 const OwnerController = {};
 
