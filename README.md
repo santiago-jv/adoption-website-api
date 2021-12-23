@@ -72,4 +72,4 @@
  
 ## Database configuration
 
-  In this project mongoDB is being used as the database. You can use mongodb locally or copy a URL from a database configured in your MONGO ATLAS account.
+  In this project mongoDB is being used as the database. You can use mongodb locally or copy a URI from a database configured in your MONGO ATLAS account.
